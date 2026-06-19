@@ -1245,6 +1245,8 @@ void ContentWidget::refresh()
 {
 	QRect r = visibleRect;
 	visibleRect = QRect();
+	if (r.isNull() && !itemInfos.isEmpty())
+		r = QRect(QPoint(), size);
 	showingRect(r);
 }
 
