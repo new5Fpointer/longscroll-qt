@@ -1,3 +1,20 @@
 *.pro.user*
 build*
 dist/
+
+# CMake
+out/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.ninja
+build.ninja
+*.dll
+*.lib
+*.exp
+*.pdb
+
+# IDE / User presets
+CMakePresets.json
+CMakeUserPresets.json

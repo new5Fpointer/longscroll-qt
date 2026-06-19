@@ -29,6 +29,7 @@ along with longscroll-qt.  If not see <http://www.gnu.org/licenses/>.
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QDebug>
+#include <QActionGroup>
 #include <algorithm>
 #include <random>
 
@@ -52,10 +53,11 @@ MainWindow::MainWindow(QWidget *parent)
 		ui->menuProperties->addAction(QString())->setData(i);
 	}
 
-	demoGroup = new QActionGroup(ui->menuProperties);
+	demoGroup = new QActionGroup(this);
 	for (int i = 0; i < 7; ++i)
 	{
-		QAction * a = new QAction(tr("Demo %1").arg(i+1), demoGroup);
+		QAction * a = new QAction(tr("Demo %1").arg(i+1));
+		demoGroup->addAction(a);
 		a->setData(i);
 		a->setCheckable(true);
 		a->setChecked(i == 0);

@@ -29,7 +29,7 @@ class LONGSCROLLQT_EXPORT LongscrollWidget : public NotifyingScrollArea
 {
 	Q_OBJECT
 public:
-	explicit LongscrollWidget(QWidget * parent = 0);
+	explicit LongscrollWidget(QWidget * parent = nullptr);
 	ContentWidget const * getContentWidget() const;
 	ContentWidget * getContentWidget();
 

@@ -35,7 +35,7 @@ class LONGSCROLLQT_EXPORT ImageItemWidget : public QFrame
 protected:
 	ImageItemWidget(ContentItemInfo const & info, int itemIndex, bool fit, bool loadImage, ContentWidget * cw, QWidget * parent);
 public:
-	ImageItemWidget(ContentItemInfo const & info, int itemIndex, bool fit = false, ContentWidget * cw = 0, QWidget * parent = 0);
+	ImageItemWidget(ContentItemInfo const & info, int itemIndex, bool fit = false, ContentWidget * cw = nullptr, QWidget * parent = nullptr);
 	~ImageItemWidget();
 
 public slots:

@@ -62,7 +62,7 @@ class LONGSCROLLQT_EXPORT BaseNavigatorWidget : public NavigatorWidget
 {
 	Q_OBJECT
 public:
-	explicit BaseNavigatorWidget(QWidget *parent = 0, Qt::WindowFlags f = 0);
+	explicit BaseNavigatorWidget(QWidget *parent = nullptr, Qt::WindowFlags f = {});
 	~BaseNavigatorWidget();
 
 protected:
@@ -74,7 +74,7 @@ class LONGSCROLLQT_EXPORT ImageNavigatorWidget : public BaseNavigatorWidget
 {
 	Q_OBJECT
 public:
-	explicit ImageNavigatorWidget(QWidget *parent = 0, Qt::WindowFlags f = 0);
+	explicit ImageNavigatorWidget(QWidget *parent = nullptr, Qt::WindowFlags f = {});
 
 	virtual void setItemInfo(ContentItemInfo const & info) override;
 

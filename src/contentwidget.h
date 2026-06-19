@@ -23,12 +23,10 @@ along with longscroll-qt.  If not see <http://www.gnu.org/licenses/>.
 #include "longscroll-qt_global.h"
 #include "notifyablescrollcontentwidget.h"
 #include "contentiteminfo.h"
+#include "contentwidgetitemfactory.h"
+#include "navigatorwidget.h"
 
 LONGSCROLLQT_NAMESPACE_BEGIN
-
-class NavigatorWidget;
-struct ContentItemInfo;
-class ContentWidgetItemFactory;
 
 #ifndef CONTENTWIDGET_VARIABLE_ROW_HEIGHT
 # define CONTENTWIDGET_VARIABLE_ROW_HEIGHT 1
@@ -61,8 +59,8 @@ private:
 	friend bool operator==(ContentWidget::RowInfo const & lhs, ContentWidget::RowInfo const & rhs);
 
 public:
-	ContentWidget(QWidget * parent = 0);
-	ContentWidget(int rowHeight, int itemWidth = 0, QWidget *parent = 0);
+	ContentWidget(QWidget * parent = nullptr);
+	ContentWidget(int rowHeight, int itemWidth = 0, QWidget *parent = nullptr);
 	~ContentWidget();
 
 	Q_PROPERTY(ContentWidgetItemFactory * itemFactory READ getItemFactory WRITE setItemFactory)

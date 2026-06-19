@@ -35,8 +35,8 @@ class LONGSCROLLQT_EXPORT ImageInfoWidget : public QFrame
 	Q_OBJECT
 
 public:
-	explicit ImageInfoWidget(QWidget *parent = 0);
-	explicit ImageInfoWidget(ContentItemInfo const & info, QWidget *parent = 0);
+	explicit ImageInfoWidget(QWidget *parent = nullptr);
+	explicit ImageInfoWidget(ContentItemInfo const & info, QWidget *parent = nullptr);
 	virtual ~ImageInfoWidget();
 
 	void setItemInfo(ContentItemInfo const & info);

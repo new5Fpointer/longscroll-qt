@@ -33,7 +33,7 @@ class LONGSCROLLQT_EXPORT ImageWidget : public QFrame
 	Q_OBJECT
 
 public:
-	explicit ImageWidget(QWidget *parent = 0);
+	explicit ImageWidget(QWidget *parent = nullptr);
 	~ImageWidget();
 
 public:
